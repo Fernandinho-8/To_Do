@@ -1,0 +1,33 @@
+tamo junto, quero um playstation do senac.
+{% extends "base.html" %} <!-- arquivo que criamos com as configuraçoes basicas-->
+
+{% block content %}
+
+<table class="table table-dark">
+  <thead>
+    <tr>
+        
+      <th scope="col">uSuario_Id</th>
+      <th scope="col">Criado_Em</th>
+      <th scope="col">id</th>
+
+
+    </tr>
+  </thead>
+  <tbody>
+    {% for i in tarefas %}
+
+
+    <tr>
+
+        <td>{{ i.usuario_id }}</td>
+        <td>{{ i.criado_em }}</td>
+        <td> {{ i.id }}</td>
+
+    </tr>
+
+    {% endfor %}    
+  </tbody>
+</table>
+
+{% endblock %}
