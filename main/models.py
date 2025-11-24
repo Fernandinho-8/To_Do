@@ -10,9 +10,9 @@ class Task(models.Model):
         ALTA = "A", "Alta"
         
     usuario = models.ForeignKey(
-        settings.AUTH_USER_MODEL, 
-        on_delete=models.CASCADE, #
-        related_name="tasks",
+        settings.AUTH_USER_MODEL, #Uma Das Formas PADRAO DE SE FAZER!!!!!!
+        on_delete=models.CASCADE, # Recurso que PODE SER USADO OU NAO!!!!
+        related_name="tasks", #REcurso que EM algumas VEZES vou TER que Usar     <<<<<<
         null=True, #sem valores
         blank=True # permiti que o campo esteja vasio, nao necessariamente precisa ser atrelado a um usuario!!!
     )
